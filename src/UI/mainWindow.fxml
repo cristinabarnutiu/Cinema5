@@ -1,0 +1,54 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<HBox fx:controller="UI.MainController"
+      xmlns:fx="http://javafx.com/fxml" alignment="center">
+
+    <VBox>
+        <TableView fx:id="tblMovies" editable="true">
+            <columns>
+                <TableColumn fx:id="colMovieId" text="Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colMovieTitle" text="Title">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="title" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colMovieYear" text="Year">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="year" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colMoviePrice" text="Price">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="colMovieInProgram" text="In Program">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="inProgram" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <TextField fx:id="txtMovieId" promptText="Id"/>
+        <TextField fx:id="txtMovieTitle" promptText="Title"/>
+        <TextField fx:id="txtMovieYear" promptText="Year"/>
+        <TextField fx:id="txtMoviePrice" promptText="Price"/>
+        <CheckBox fx:id="chkMovieInProgram" text="In Program"/>
+        <Button fx:id="btnAddMovie" text="Add Movie" onAction="#btnAddMovieClick"/>
+    </VBox>
+
+</HBox>
